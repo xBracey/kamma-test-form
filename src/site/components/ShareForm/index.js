@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, TextInput, InputContainer, Submit } from "./styles";
+import { ResponsePopup } from "../";
 
 export default () => {
   const [error, setError] = useState(null);
@@ -60,33 +61,45 @@ export default () => {
     postRequest();
   };
 
+  const onPopupClose = () => {
+    if (!!success) {
+      setSuccess(null);
+      window.location.reload(false);
+    } else {
+      setError(null);
+    }
+  };
+
   return (
-    <Form onSubmit={submitForm}>
-      <InputContainer required>
-        <label htmlFor="name">Your Name</label>
-        <TextInput
-          type="text"
-          id="name"
-          onChange={event => changeData("name", event)}
-        />
-      </InputContainer>
-      <InputContainer required>
-        <label htmlFor="name">Friend's Name</label>
-        <TextInput
-          type="text"
-          id="friendName"
-          onChange={event => changeData("friendName", event)}
-        />
-      </InputContainer>
-      <InputContainer required>
-        <label htmlFor="name">Friend's Email</label>
-        <TextInput
-          type="text"
-          id="friendEmail"
-          onChange={event => changeData("friendEmail", event)}
-        />
-      </InputContainer>
-      <Submit type="submit" value="Submit" />
-    </Form>
+    <>
+      <ResponsePopup error={error} success={success} onClose={onPopupClose} />
+      <Form onSubmit={submitForm}>
+        <InputContainer required>
+          <label htmlFor="name">Your Name</label>
+          <TextInput
+            type="text"
+            id="name"
+            onChange={event => changeData("name", event)}
+          />
+        </InputContainer>
+        <InputContainer required>
+          <label htmlFor="name">Friend's Name</label>
+          <TextInput
+            type="text"
+            id="friendName"
+            onChange={event => changeData("friendName", event)}
+          />
+        </InputContainer>
+        <InputContainer required>
+          <label htmlFor="name">Friend's Email</label>
+          <TextInput
+            type="text"
+            id="friendEmail"
+            onChange={event => changeData("friendEmail", event)}
+          />
+        </InputContainer>
+        <Submit type="submit" value="Submit" />
+      </Form>
+    </>
   );
 };

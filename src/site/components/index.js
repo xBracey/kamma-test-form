@@ -4,5 +4,6 @@ import Head from "./Head";
 import Footer from "./Footer";
 import ReadMore from "./ReadMore";
 import ShareForm from "./ShareForm";
+import ResponsePopup from "./ResponsePopup";
 
-export { Content, Header, Head, Footer, ReadMore, ShareForm };
+export { Content, Header, Head, Footer, ReadMore, ShareForm, ResponsePopup };

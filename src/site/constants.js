@@ -5,4 +5,6 @@ export const COLORS = {
   BLACK: "#000000",
   LOGO: "#34485c",
   PINK: "#ff1f46",
+  RED: "#8b0000",
+  GREEN: "#009975",
 };
