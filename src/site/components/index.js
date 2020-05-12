@@ -3,5 +3,6 @@ import Content from "./Content";
 import Head from "./Head";
 import Footer from "./Footer";
 import ReadMore from "./ReadMore";
+import ShareForm from "./ShareForm";
 
-export { Content, Header, Head, Footer, ReadMore };
+export { Content, Header, Head, Footer, ReadMore, ShareForm };
