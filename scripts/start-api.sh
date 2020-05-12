@@ -1,7 +1,7 @@
 yarn
 
 if [ $NODE_ENV == "development" ]; then
-    yarn develop-api
+    yarn develop
 else
-    yarn build-api
+    yarn build
 fi

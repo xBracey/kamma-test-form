@@ -6,10 +6,10 @@
   "license": "MIT",
   "scripts": {
     "build-site": "gatsby build",
-    "develop-site": "gatsby develop",
+    "develop-site": "gatsby develop -H 0.0.0.0",
     "serve-site": "npm run build && http-server ./public",
     "start-api": "babel-node ./src/api/index.ts --extensions \".ts,.tsx\"",
-    "develop-api":  "nodemon --exec babel-node ./src/api/index.ts --extensions \".ts,.tsx\"",
+    "develop-api": "nodemon --exec babel-node ./src/api/index.ts --extensions \".ts,.tsx\"",
     "build": "npm run build-site",
     "develop": "concurrently \"npm run develop-site\" \"npm run develop-api\"",
     "serve": "concurrently \"npm run serve-site\" \"npm run start-api\""
@@ -36,15 +36,19 @@
     "gatsby-plugin-react-helmet": "^3.3.1",
     "http-server": "^0.12.3",
     "jest": "^26.0.1",
+    "mysql2": "^2.1.0",
     "nodemon": "^2.0.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.5",
     "sequelize": "^5.21.8",
     "sequelize-typescript": "^1.1.0",
     "styled-components": "^5.1.0",
     "supertest": "^4.0.2",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "validator": "^13.0.0"
   },
   "devDependencies": {
     "prettier": "2.0.5"

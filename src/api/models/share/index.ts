@@ -1,16 +1,22 @@
-import { DataType, Table, Column, Model, NotNull } from "sequelize-typescript";
+import {
+  DataType,
+  Table,
+  Column,
+  Model,
+  AllowNull,
+} from "sequelize-typescript";
 
 @Table
 export default class share extends Model<share> {
-  @NotNull
+  @AllowNull(false)
   @Column(DataType.STRING)
   name: string;
 
-  @NotNull
+  @AllowNull(false)
   @Column(DataType.STRING)
   friendName: string;
 
-  @NotNull
+  @AllowNull(false)
   @Column(DataType.STRING)
   friendEmail: string;
 }

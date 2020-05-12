@@ -1,4 +1,4 @@
-import { models } from "..";
+import { models } from "../models";
 import IShare from "../models/share/type";
 import share from "../models/share";
 
