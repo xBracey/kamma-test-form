@@ -5,9 +5,10 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
+    "start": "docker-compose up",
     "build-site": "gatsby build",
     "develop-site": "gatsby develop -H 0.0.0.0",
-    "serve-site": "npm run build && http-server ./public",
+    "serve-site": "npm run build && http-server -p 8000 -P http://localhost:3000 ./public",
     "start-api": "babel-node ./src/api/index.ts --extensions \".ts,.tsx\"",
     "develop-api": "nodemon --exec babel-node ./src/api/index.ts --extensions \".ts,.tsx\"",
     "build": "npm run build-site",

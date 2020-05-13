@@ -6,9 +6,9 @@ export default () => {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
   const [data, setData] = useState({
-    name: null,
-    friendName: null,
-    friendEmail: null,
+    name: "",
+    friendName: "",
+    friendEmail: "",
   });
 
   const isEmpty = parameter => {
@@ -80,6 +80,7 @@ export default () => {
             type="text"
             id="name"
             onChange={event => changeData("name", event)}
+            value={data.name}
           />
         </InputContainer>
         <InputContainer required>
@@ -88,6 +89,7 @@ export default () => {
             type="text"
             id="friendName"
             onChange={event => changeData("friendName", event)}
+            value={data.friendName}
           />
         </InputContainer>
         <InputContainer required>
@@ -96,6 +98,7 @@ export default () => {
             type="text"
             id="friendEmail"
             onChange={event => changeData("friendEmail", event)}
+            value={data.friendEmail}
           />
         </InputContainer>
         <Submit type="submit" value="Submit" />

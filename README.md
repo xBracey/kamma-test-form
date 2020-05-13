@@ -5,18 +5,22 @@
 The following prerequisites are needed to run this project
 
 - NPM/Yarn
+- Docker
 
-## Commands
+## View production build
 
-Before starting anything on this project, you will need to install the NPM depencies by running the following command:
+To view a production build, just run `yarn start` which will build and run the docker containers.
 
-`yarn`
+## Start Development
 
-**To start development, run the following:**
-`yarn develop`
+Before starting anything on this project, you will need to install the NPM dependencies by running `yarn`
 
-**To build the project to the /public folder, run the following:**
-`yarn build`
+You will need to also create an `.env` file at the root of the project. To do this:
 
-**To serve the project locally, run the following:**
-`yarn serve`
+1. Copy the example env file `cp .env.example .env`
+2. Fill in any relevant deatils such as the SMTP email and password
+
+**To start development, do the following:**
+
+1. Open up the `.env` file and change the NODE_ENV variable from production to development.
+2. Run `yarn start`
