@@ -12,7 +12,9 @@
     "develop-api": "nodemon --exec babel-node ./src/api/index.ts --extensions \".ts,.tsx\"",
     "build": "npm run build-site",
     "develop": "concurrently \"npm run develop-site\" \"npm run develop-api\"",
-    "serve": "concurrently \"npm run serve-site\" \"npm run start-api\""
+    "serve": "concurrently \"npm run serve-site\" \"npm run start-api\"",
+    "test": "jest --collectCoverage",
+		"test-watch": "jest --collectCoverage --watch"
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",
@@ -45,6 +47,7 @@
     "rxjs": "^6.5.5",
     "sequelize": "^5.21.8",
     "sequelize-typescript": "^1.1.0",
+    "sqlite3": "^4.2.0",
     "styled-components": "^5.1.0",
     "supertest": "^4.0.2",
     "typescript": "^3.8.3",
