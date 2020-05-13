@@ -7,7 +7,7 @@ The following prerequisites are needed to run this project
 - NPM/Yarn
 - Docker
 
-## Configure SMTP
+## Configure project
 
 If you haven't already, you will need to create an `.env` file at the root of the project. To do this first copy the example env file
 `cp .env.example .env`
@@ -17,6 +17,13 @@ To configure SMTP, fill in any relevant deatils such as the SMTP email and passw
 ## View production build
 
 To view a production build, just run `yarn start` which will build and run the docker containers.
+
+## Tests
+
+To run the test suite for this project, do the following:
+
+1. Install the NPM dependencies by running `yarn`
+2. Run `yarn test`
 
 ## Start Development
 
