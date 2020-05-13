@@ -5,7 +5,7 @@ describe("Test isValidShare", () => {
     const validShare = isValidShare({
       name: "Tom",
       friendName: "Dan",
-      friendEmail: "dan@gmail.com",
+      friendEmail: "thomasbracetestsmtp@hotmail.com",
     });
 
     expect(validShare).toBe(true);
@@ -15,7 +15,7 @@ describe("Test isValidShare", () => {
   it("Not Valid", async done => {
     const validShare = isValidShare({
       name: "Tom",
-      friendEmail: "dan@gmail.com",
+      friendEmail: "thomasbracetestsmtp@hotmail.com",
     });
 
     expect(validShare).toBe(false);

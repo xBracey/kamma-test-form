@@ -7,7 +7,11 @@ describe("Test add share endpoint", () => {
   it("Valid share", async done => {
     const response = await request
       .post("/api/share/add")
-      .send({ name: "Tom", friendName: "Dan", friendEmail: "dan@gmail.com" })
+      .send({
+        name: "Tom",
+        friendName: "Dan",
+        friendEmail: "thomasbrace22@gmail.com",
+      })
       .set("Accept", "application/json");
 
     expect(response.status).toBe(200);
@@ -18,7 +22,7 @@ describe("Test add share endpoint", () => {
   it("Invalid share", async done => {
     const response = await request
       .post("/api/share/add")
-      .send({ name: "Tom", friendEmail: "dan@gmail.com" })
+      .send({ name: "Tom", friendEmail: "thomasbracetestsmtp@hotmail.com" })
       .set("Accept", "application/json");
 
     expect(response.status).toBe(400);
@@ -44,7 +48,7 @@ describe("Test add share endpoint", () => {
         id: 1,
         name: "Tom",
         friendName: "Dan",
-        friendEmail: "dan@gmail.com",
+        friendEmail: "thomasbracetestsmtp@hotmail.com",
       })
       .set("Accept", "application/json");
 
