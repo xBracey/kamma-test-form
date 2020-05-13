@@ -10,7 +10,7 @@ describe("Test add share endpoint", () => {
       .send({
         name: "Tom",
         friendName: "Dan",
-        friendEmail: "thomasbrace22@gmail.com",
+        friendEmail: "thomasbracetestsmtp@hotmail.com",
       })
       .set("Accept", "application/json");
 
