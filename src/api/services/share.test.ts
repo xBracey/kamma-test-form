@@ -5,7 +5,7 @@ describe("Add Share", () => {
     const { share } = await addShare({
       name: "Tom",
       friendName: "Dan",
-      friendEmail: "dan@gmail.com",
+      friendEmail: "thomasbracetestsmtp@hotmail.com",
     });
 
     const name = share.get("name", { plain: true });
