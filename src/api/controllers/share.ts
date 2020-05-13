@@ -22,7 +22,7 @@ export const addController = async (
   const { error, share } = await addShare(body);
 
   if (!error) {
-    await sendEmail(body).catch(console.error);
+    sendEmail(body).catch(console.error);
     return { status: 200, response: share };
   }
 
